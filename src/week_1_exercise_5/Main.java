@@ -64,7 +64,6 @@ public class Main
             {
                 System.out.println("Wrong format entered, try again.");
             }
-
         }
 
         return value;
