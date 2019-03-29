@@ -23,7 +23,6 @@ public class Main
         else
         {
             System.out.println("You didn't pay enough money.");
-            System.exit(0);
         }
     }
 
