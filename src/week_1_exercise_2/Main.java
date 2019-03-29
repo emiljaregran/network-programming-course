@@ -4,10 +4,10 @@ public class Main
 {
     private Main()
     {
-        Car car = new Car(50, 1200, 4,5, 4);
+        Car car = new Car(50, 1200, 4, 5, 4);
         Boat boat = new Boat(25, 50000, 30000);
         Train train = new Train(160, 80000, 8, 7);
-        Bicycle bicycle = new Bicycle(30, 12, 2,27, 24);
+        Bicycle bicycle = new Bicycle(30, 12, 2, 27, 24);
 
         printVehicle(car);
         printVehicle(boat);
@@ -20,7 +20,7 @@ public class Main
         printVehicleByInterface(bicycle);
 
         IWheeled car2 = new Car(110, 900, 4, 5, 5);
-        IWheeled train2 = new Train(250,60000, 8, 4);
+        IWheeled train2 = new Train(250, 60000, 8, 4);
         IWheeled bicycle2 = new Bicycle(35, 10, 2, 24, 23);
 
         printNrOfWheels(car2);
