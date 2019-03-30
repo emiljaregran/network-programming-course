@@ -1,15 +1,14 @@
 package week_2_exercise_2;
 
-import javax.swing.*;
+import java.io.*;
 import java.awt.*;
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.print.PrinterException;
-import java.io.*;
 
 public class TextEditor implements ActionListener
 {
-    private final JLabel label = new JLabel("Filename:");
     private final JTextField textField = new JTextField();
     private final JButton openButton = new JButton("Open");
     private final JButton saveButton = new JButton("Save");
@@ -19,9 +18,10 @@ public class TextEditor implements ActionListener
 
     private TextEditor()
     {
-        JFrame frame = new JFrame("Text Editor");
-        JPanel topPanel = new JPanel(new FlowLayout());
-        JPanel centerPanel = new JPanel(new BorderLayout());
+        final JFrame frame = new JFrame("Text Editor");
+        final JPanel topPanel = new JPanel(new FlowLayout());
+        final JPanel centerPanel = new JPanel(new BorderLayout());
+        final JLabel label = new JLabel("Filename:");
         final JScrollPane scrollPane = new JScrollPane(textArea);
 
         frame.setLayout(new BorderLayout());
