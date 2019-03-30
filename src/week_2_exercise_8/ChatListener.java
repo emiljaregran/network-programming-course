@@ -21,7 +21,7 @@ public class ChatListener extends Thread
     @Override
     public void run()
     {
-        while(!interrupted())
+        while(!Thread.interrupted())
         {
             byte[] receivedArray = new byte[RECEIVE_BUFFER_SIZE];
             DatagramPacket datagramPacket = new DatagramPacket(receivedArray, receivedArray.length);
