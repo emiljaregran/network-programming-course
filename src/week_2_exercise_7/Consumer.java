@@ -1,0 +1,32 @@
+package week_2_exercise_7;
+
+public class Consumer implements Runnable
+{
+    private final int interval;
+    private final SimpleQueue queue;
+    public Thread activity = new Thread(this);
+
+    public Consumer (int seconds, SimpleQueue queue)
+    {
+        this.interval = seconds * 1000;
+        this.queue = queue;
+    }
+
+    @Override
+    public void run()
+    {
+        while(!Thread.interrupted())
+        {
+            try
+            {
+                Thread.sleep(interval);
+                QueueElement element = queue.take();
+                System.out.println("Taking " + element.getText());
+            }
+            catch (InterruptedException e)
+            {
+                break;
+            }
+        }
+    }
+}
