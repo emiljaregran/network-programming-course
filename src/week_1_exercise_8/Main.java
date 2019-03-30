@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class Main
 {
-    HashMap<Integer, Integer> wordCount = new HashMap<>();
-    URL url;
+    private HashMap<Integer, Integer> wordCount = new HashMap<>();
+    private URL url;
 
     private Main(String urlString)
     {
