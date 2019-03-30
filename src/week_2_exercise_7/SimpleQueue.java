@@ -4,7 +4,7 @@ import java.util.*;
 
 public class SimpleQueue
 {
-    private final List<QueueElement> list = new ArrayList<>();
+    private final LinkedList<QueueElement> list = new LinkedList<>();
 
     public int size()
     {
@@ -13,8 +13,28 @@ public class SimpleQueue
 
     public synchronized void put(QueueElement element)
     {
-        System.out.println("Putting " + element.getText());
-        list.add(element);
+        ListIterator<QueueElement> listIterator = list.listIterator(0);
+
+        if (list.isEmpty())
+        {
+            list.addFirst(element);
+        }
+        else
+        {
+            int nextIndex = 0;
+
+            while(listIterator.hasNext())
+            {
+                nextIndex = listIterator.nextIndex();
+                if (element.getPriority() >= listIterator.next().getPriority())
+                {
+                    break;
+                }
+            }
+
+            list.add(nextIndex, element);
+        }
+
         notify();
     }
 
@@ -32,13 +52,11 @@ public class SimpleQueue
             }
         }
 
-        QueueElement element = list.get(0);
-        list.remove(0);
-        return element;
+        return list.poll();
     }
 
-    public void printQueue()
+    public synchronized void printQueue()
     {
-        list.forEach(element -> System.out.println(element.getText()));
+        list.forEach(element -> System.out.println(element.getText() + " [" + element.getPriority() + "]"));
     }
 }

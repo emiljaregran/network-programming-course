@@ -18,9 +18,12 @@ public class MainClass
             System.out.println(" Interval:");
             int time = scanner.nextInt();
 
+            System.out.println("Priority:");
+            int priority = scanner.nextInt();
+
             System.out.println("Text? ");
             String text = scanner.next();
-            producers[i] = new Producer(text, time, buffer);
+            producers[i] = new Producer(text, time, priority, buffer);
         }
 
         System.out.println("Number of consumers: ");

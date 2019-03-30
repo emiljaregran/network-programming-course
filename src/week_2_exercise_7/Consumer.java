@@ -21,7 +21,7 @@ public class Consumer implements Runnable
             {
                 Thread.sleep(interval);
                 QueueElement element = queue.take();
-                System.out.println("Taking " + element.getText());
+                System.out.println("Taking " + element.getText() + " [" + element.getPriority() + "]");
             }
             catch (InterruptedException e)
             {
