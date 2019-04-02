@@ -8,17 +8,20 @@ import java.net.Socket;
 
 public class ClientHandler extends Thread
 {
-    private final Socket socket;
+    private final Socket clientSocket;
 
-    public ClientHandler(Socket socket)
+    public ClientHandler(Socket clientSocket)
     {
-        this.socket = socket;
+        this.clientSocket = clientSocket;
+        start();
     }
 
     public void run()
     {
-        try(ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
-            BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream())))
+        System.out.println(clientSocket.getInetAddress() + " is connected!");
+
+        try(ObjectOutputStream outputStream = new ObjectOutputStream(clientSocket.getOutputStream());
+            BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream())))
         {
             String receivedMessage;
             Protocol protocol = new Protocol();

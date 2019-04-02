@@ -7,33 +7,29 @@ import java.net.SocketException;
 
 public class Server
 {
-    private Server(int listenPort) throws IOException
+    private Server(int listenPort)
     {
-        ServerSocket serverSocket = new ServerSocket(listenPort);
         System.out.println("Listening on port " + listenPort);
 
-        while (true)
+        try(ServerSocket serverSocket = new ServerSocket(listenPort))
         {
-            try
+            while (true)
             {
-                Socket clientSocket = serverSocket.accept();
-                System.out.println(clientSocket.getInetAddress() + " is connected!");
-                ClientHandler clientHandler = new ClientHandler(clientSocket);
-                clientHandler.start();
+                new ClientHandler(serverSocket.accept());
             }
-            catch(SocketException e)
-            {
-                System.out.println(e.getMessage());
-            }
-            catch(IOException e)
-            {
-                e.printStackTrace();
-                break;
-            }
+        }
+        catch(SocketException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
         }
     }
 
-    public static void main(String[] args) throws IOException
+
+    public static void main(String[] args)
     {
         new Server(55555);
     }
