@@ -1,4 +1,4 @@
-package week_1_exercise_4;
+package w1_e4_calculator;
 
 public class Calculator
 {

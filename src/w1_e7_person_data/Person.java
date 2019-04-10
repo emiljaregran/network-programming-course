@@ -1,4 +1,4 @@
-package week_1_exercise_7;
+package w1_e7_person_data;
 
 public class Person
 {

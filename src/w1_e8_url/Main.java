@@ -1,4 +1,4 @@
-package week_1_exercise_8;
+package w1_e8_url;
 
 import java.io.BufferedReader;
 import java.io.IOException;

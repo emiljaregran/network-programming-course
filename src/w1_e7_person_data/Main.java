@@ -1,4 +1,4 @@
-package week_1_exercise_7;
+package w1_e7_person_data;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -14,9 +14,9 @@ public class Main
 
     private Main()
     {
-        readPersonDataFile("src\\week_1_exercise_7\\Person_data.txt");
+        readPersonDataFile("src\\w1_e7_person_data\\Person_data.txt");
         addLongPersonsToList(200);
-        saveLongPersonDataFile("src\\week_1_exercise_7\\Long_persons.txt");
+        saveLongPersonDataFile("src\\w1_e7_person_data\\Long_persons.txt");
 
         System.out.println(longPersonList.size() + " persons written to file.");
     }

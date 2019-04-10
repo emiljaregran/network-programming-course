@@ -1,4 +1,4 @@
-package week_1_exercise_4;
+package w1_e4_calculator;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package week_1_exercise_2;
+package w1_e2_inheritance;
 
 public class Car extends Vehicle implements IPrintable, IWheeled
 {

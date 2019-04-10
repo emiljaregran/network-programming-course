@@ -1,4 +1,4 @@
-package week_1_exercise_6;
+package w1_e6_temperature;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -14,7 +14,7 @@ public class Main
 
     private Main()
     {
-        readTemperatureFile("src\\week_1_exercise_6\\Temperatures.txt");
+        readTemperatureFile("src\\w1_e6_temperature\\Temperatures.txt");
 
         double maxTemperature = Collections.max(temperatures);
         double minTemperature = Collections.min(temperatures);

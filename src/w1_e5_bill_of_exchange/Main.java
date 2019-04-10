@@ -1,4 +1,4 @@
-package week_1_exercise_5;
+package w1_e5_bill_of_exchange;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

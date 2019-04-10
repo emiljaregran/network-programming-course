@@ -1,4 +1,4 @@
-package week_1_exercise_1;
+package w1_e1_hello_world;
 
 public class Main
 {
