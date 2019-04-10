@@ -25,6 +25,7 @@ network-programming-course.iml
 out/
 
 # Netbeans files
+*/MANIFEST.MF
 build/
 build.xml
 nbproject/
