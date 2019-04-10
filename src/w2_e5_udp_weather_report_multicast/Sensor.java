@@ -1,4 +1,4 @@
-package week_2_exercise_4;
+package w2_e5_udp_weather_report_multicast;
 
 import java.net.*;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.InputMismatchException;
 
 public class Sensor
 {
-    private DatagramSocket socket;
+    private MulticastSocket socket;
     private InetAddress inetAddress;
 
     private Sensor(String destinationIp, int destinationPort)
@@ -33,7 +33,7 @@ public class Sensor
         {
             socket.send(datagramPacket);
         }
-        catch (IOException e)
+        catch(IOException e)
         {
             e.printStackTrace();
         }
@@ -43,12 +43,16 @@ public class Sensor
     {
         try
         {
-            socket = new DatagramSocket();
+            socket = new MulticastSocket();
         }
         catch(SocketException e)
         {
             System.out.println("Failed to create socket, exiting...");
             System.exit(-1);
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
         }
     }
 
@@ -94,6 +98,6 @@ public class Sensor
 
     public static void main(String[] args)
     {
-        new Sensor("127.0.0.1", 55555);
+        new Sensor("234.235.236.237", 55555);
     }
 }

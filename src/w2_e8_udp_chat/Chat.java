@@ -1,4 +1,4 @@
-package week_2_exercise_8;
+package w2_e8_udp_chat;
 
 import java.awt.*;
 import javax.swing.*;

@@ -1,4 +1,4 @@
-package week_2_exercise_7;
+package w2_e7_threading_queue_priority;
 
 public class Consumer implements Runnable
 {

@@ -1,18 +1,17 @@
-package week_2_exercise_5;
+package w2_e4_udp_weather_report;
 
 import java.io.IOException;
-import java.net.*;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.SocketException;
 
 public class Receiver
 {
-    private MulticastSocket socket;
-    private InetAddress inetAddress;
+    private DatagramSocket socket;
 
-    private Receiver(String multicastAddress, int port, int bufferSize)
+    private Receiver(int port, int bufferSize)
     {
-        setInetAddress(multicastAddress);
         createSocket(port);
-        joinGroup(inetAddress);
 
         while (true)
         {
@@ -37,35 +36,11 @@ public class Receiver
         return new String(buffer, 0, buffer.length);
     }
 
-    private void joinGroup(InetAddress inetAddress)
-    {
-        try
-        {
-            socket.joinGroup(inetAddress);
-        }
-        catch(IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
-
-    private void setInetAddress(String multicastAddress)
-    {
-        try
-        {
-            inetAddress = InetAddress.getByName(multicastAddress);
-        }
-        catch(UnknownHostException e)
-        {
-            e.printStackTrace();
-        }
-    }
-
     private void createSocket(int port)
     {
         try
         {
-            socket = new MulticastSocket(port);
+            socket = new DatagramSocket(port);
             System.out.println("Socket created.");
         }
         catch(SocketException e)
@@ -73,14 +48,10 @@ public class Receiver
             System.out.println("Failed to create socket, exiting...");
             System.exit(-1);
         }
-        catch(IOException e)
-        {
-            e.printStackTrace();
-        }
     }
 
     public static void main(String[] args)
     {
-        new Receiver("234.235.236.237",55555, 256);
+        new Receiver(55555, 256);
     }
 }

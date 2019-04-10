@@ -1,4 +1,4 @@
-package week_2_exercise_6;
+package w2_e6_threading_medicine;
 
 import javax.swing.JOptionPane;
 

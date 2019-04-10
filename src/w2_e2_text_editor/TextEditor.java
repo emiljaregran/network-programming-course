@@ -1,4 +1,4 @@
-package week_2_exercise_2;
+package w2_e2_text_editor;
 
 import java.io.*;
 import java.awt.*;
@@ -72,7 +72,7 @@ public class TextEditor implements ActionListener
 
     private void readFile(String filename)
     {
-        try(FileReader fileReader = new FileReader("src\\week_2_exercise_2\\" + filename))
+        try(FileReader fileReader = new FileReader("src\\w2_e2_text_editor\\" + filename))
         {
             textArea.read(fileReader, null);
         }
@@ -88,7 +88,7 @@ public class TextEditor implements ActionListener
 
     private void saveFile(String filename)
     {
-        try(FileWriter fileWriter = new FileWriter("src\\week_2_exercise_2\\" + filename))
+        try(FileWriter fileWriter = new FileWriter("src\\w2_e2_text_editor\\" + filename))
         {
             textArea.write(fileWriter);
         }

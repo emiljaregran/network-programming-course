@@ -1,4 +1,4 @@
-package week_2_exercise_3;
+package w2_e3_udp_quotes;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
