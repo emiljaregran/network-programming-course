@@ -1,4 +1,4 @@
-package com.nackademin.systemintegration.websocketchatdemo.model;
+
 
 public class Message {
     private String from;

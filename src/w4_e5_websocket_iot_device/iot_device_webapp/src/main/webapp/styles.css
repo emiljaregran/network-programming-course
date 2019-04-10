@@ -1,21 +1,25 @@
-body {
+body
+{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 80%;
     background-color: #1f1f1f;
 }
 
-#wrapper {
+#wrapper
+{
     width: 960px;
     margin: auto;
     text-align: left;
     color: #d9d9d9;
 }
 
-p {
+p
+{
     text-align: left;
 }
 
-.button {
+.button
+{
     display: inline;
     color: #fff;
     background-color: #f2791d;
@@ -28,38 +32,46 @@ p {
     border: none;
 }
 
-.button:hover {
+.button:hover
+{
     background-color: #ffb15e;
 }
-.button a, a:visited, a:hover, a:active {
+
+.button a, a:visited, a:hover, a:active
+{
     color: #fff;
     text-decoration: none;
 }
 
-#addDevice {
+#addDevice
+{
     text-align: center;
     width: 960px;
     margin: auto;
     margin-bottom: 10px;
 }
 
-#addDeviceForm {
+#addDeviceForm
+{
     text-align: left;
     width: 400px;
     margin: auto;
     padding: 10px;
 }
 
-#addDeviceForm span {
+#addDeviceForm span
+{
     display: block;
 }
 
-#content {
+#content
+{
     margin: auto;
     width: 960px;
 }
 
-.device {
+.device
+{
     width: 180px;
     height: 110px;
     margin: 10px;
@@ -72,65 +84,80 @@ p {
     display: inline-block;
 }
 
-.device.off {
+.device.off
+{
     background-color: #c8cccf;
 }
 
-.device span {
+.device span
+{
     display: block;
 }
 
-.deviceName {
+.deviceName
+{
     text-align: center;
     font-weight: bold;
     margin-bottom: 12px;
 }
 
-.removeDevice {
+.removeDevice
+{
     margin-top: 12px;
     text-align: center;
 }
 
-.device.Appliance {
+.device.Appliance
+{
     background-color: #5eb85e;
 }
 
-.device.Appliance a:hover {
+.device.Appliance a:hover
+{
     color: #a1ed82;
 }
 
-.device.Electronics {   
+.device.Electronics
+{   
     background-color: #0f90d1;
 }
 
-.device.Electronics a:hover {
+.device.Electronics a:hover
+{
     color: #4badd1;
 }
 
-.device.Lights {
+.device.Lights
+{
     background-color: #c2a00c;
 }
 
-.device.Lights a:hover {
+.device.Lights a:hover
+{
     color: #fad232;
 }
 
-.device.Other {
+.device.Other
+{
     background-color: #db524d;
 }
 
-.device.Other a:hover {
+.device.Other a:hover
+{
     color: #ff907d;
 }
 
-.device a {
+.device a
+{
     text-decoration: none;
 }
 
-.device a:visited, a:active, a:hover {
+.device a:visited, a:active, a:hover
+{
     color: #fff;
 }
 
-.device a:hover {
+.device a:hover
+{
     text-decoration: underline;
 }
