@@ -27,9 +27,9 @@ public class OthelloClient implements ActionListener
     final int BOARD_SIZE = 8;
     final Square[][] board = new Square[BOARD_SIZE][BOARD_SIZE];
 
-    final ImageIcon blankIcon = new ImageIcon("empty.png");
-    final ImageIcon whiteIcon = new ImageIcon("white.png");
-    final ImageIcon blackIcon = new ImageIcon("black.png");
+    final ImageIcon blankIcon = new ImageIcon("src\\w3_e9_tcp_othello\\img\\empty.png");
+    final ImageIcon whiteIcon = new ImageIcon("src\\w3_e9_tcp_othello\\img\\white.png");
+    final ImageIcon blackIcon = new ImageIcon("src\\w3_e9_tcp_othello\\img\\black.png");
 
     private final JTextField hostnameTextField = new JTextField("127.0.0.1");
     private final JTextField portTextField = new JTextField("8901");
